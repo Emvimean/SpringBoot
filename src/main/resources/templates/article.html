@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="Stylesheet" >
+<title>Article page</title>
+<link rel="stylesheet" type="text/css" href="/css.css">
+</head>
+<body class="container">
+	<dev class="header">
+	<h1>Article Management System</h1>
+	<button><a th:href="@{article/add}">Add Article</a> </dev></button>
+	
+	<dev class="content">
+	<table border="1">
+		<tr>
+			<th th:text="#{table.id}">No</th>
+			<th th:text="#{table.title}">Title</th>
+			<th th:text="#{table.desc}">Description</th>
+			<th th:text="#{table.thum}">Thumbnail</th>
+			<th th:text="#{table.action}">Action</th>
+		</tr>
+		<tr th:each="article:${articles}" th:object="${article}">
+			<td th:text="*{id}"></td>
+			<td th:text="*{title}"></td>
+			<td th:text="*{description}"></td>
+			<td>
+				<img src="" th:src="*{thumbnail}">
+			</td>		
+			<td id="button"> 
+			<!-- // RequesParam -->
+			<!-- <a th:href="@{article/articleId(id=*{id})}">View</a> -->
+			<!-- // PathVariable -->
+			<button><a th:href="@{article/view/{id}(id=*{id})}">View</a></button>
+			<button><a th:href="@{article/remove/{id}(id=*{id})}">Remove</a></button>
+			<button><a th:href="@{article/update/{id}(id=*{id})}">Update</a></button>
+			</td>
+		</tr>
+
+	</table>
+	</dev>
+	<dev class="footer">
+	
+	</dev>
+
+</body>
+</html>

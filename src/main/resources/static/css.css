@@ -1,0 +1,38 @@
+@charset "ISO-8859-1";
+body {
+	margin: 0 auto;
+	padding: 0 auto;
+}
+.container {
+	margin: 0 auto;
+	width: 80%;
+	height: auto;
+	text-align: center;
+}
+table, th, tr, td {
+	border-collapse: collapse;
+	text-align: center;
+}
+img {
+	width: 100px;
+	height: 100px;
+}
+.header {
+	height: 250px;
+	width: 80%;
+	background-color: pink;
+}
+.content {
+	width: 80%;
+	hieght: 0 auto;
+	background-color: pray;
+}
+#button {
+	width: 100px;
+	hieght: 100px;
+}
+.footer {
+	height: 250px;
+	width: 80%;
+	background-color: pink;
+}
